@@ -1,0 +1,8 @@
+.product-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-top: 206px;
+    margin-left: 100px;
+    margin-right: 80px;
+}
