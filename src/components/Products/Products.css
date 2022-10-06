@@ -6,3 +6,10 @@
     margin-left: 100px;
     margin-right: 80px;
 }
+
+@media screen and (max-width:1200px) {
+    .product-cards{
+        grid-template-columns:repeat(2, 1fr);
+    }
+    
+}

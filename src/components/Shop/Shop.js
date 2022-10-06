@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 import Products from '../Products/Products';
+import Summary from '../Summary/Summary';
+
+import {addToCartDB, getStoredCart} from '../../utilities/fakedb';
 
 import './Shop.css'
 
@@ -7,22 +10,74 @@ import './Shop.css'
 const Shop = () => {
 
     const [products, setProducts] = useState([]);
+    const [cart, setCart] = useState([]);
+
+
         useEffect( () =>{
             fetch('products.json')
             .then(res=> res.json())
             .then(data =>setProducts(data))
         }, []);
 
+
+        let newCart = []
+        const cartHandler = (product) => {
+            
+
+            const existedProduct = cart.find(selectedProduct => selectedProduct.id === product.id);
+
+            if(!existedProduct){
+                product.quantity = 1;
+                newCart = [...cart, product];
+            }
+            else{
+                const restProduct = cart.filter(selectedProduct => selectedProduct.id !== product.id);
+                existedProduct.quantity += 1;
+                newCart = [...restProduct, existedProduct];
+
+            }
+
+
+
+            setCart(newCart);
+
+               addToCartDB(product.id);
+        }
+
+
+        useEffect(() => {
+            const getCart = getStoredCart();
+            
+            const savedCart = [];
+
+            for (const id in getCart) {
+                const addedProduct = products.find(product => product.id === id);
+                if(addedProduct){
+                    const newQuantity = getCart[id];
+                    addedProduct.quantity = newQuantity;
+                    savedCart.push(addedProduct);
+                    
+                    //console.log(addedProduct);
+            }
+            }
+
+            setCart(savedCart);
+
+        }, [products]);
+
+
+
+
     return (
         <div className='container'>
 
             <div className="card-container">
-                <Products products={products}></Products>
+                <Products products={products} addToCart={cartHandler}></Products>
             </div>
 
 
             <div className="summary-container">
-                <h3>Order Summery</h3>
+                <Summary cart={cart}></Summary>
             </div>
         </div>
     );

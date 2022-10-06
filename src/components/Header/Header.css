@@ -17,7 +17,9 @@
     margin: 32px;
     font-size: 17px;
 }
-
+.header a:hover{
+    color: orange;
+}
 .header .links{
     margin-right: 112px;
 }

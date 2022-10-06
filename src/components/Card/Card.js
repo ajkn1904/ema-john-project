@@ -2,17 +2,19 @@ import React from 'react';
 import './Card.css'
 
 const Card = (props) => {
-    const {img, name, price, seller} = props.product;
+    const {img, name, price, seller, ratings} = props.product;
         return (
         <div className='card'>
             <img src={img} alt="" />
             <div className='card-info'>
-                <h4>{name}</h4>
+                <h5>{name}</h5>
                 <p>Price: ${price}</p>
-                <small>{seller}</small>
+                <small>Manufacturer: {seller}</small>
+                <br></br>
+                <small>Rating: {ratings} stars</small>
             </div>
 
-            <button>Add top Cart</button>
+            <button onClick={()=> props.addToCart(props.product)}>Add top Cart</button>
         </div>
     );
 };

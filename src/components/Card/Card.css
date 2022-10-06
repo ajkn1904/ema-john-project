@@ -1,7 +1,7 @@
 .card{
  border: 1px solid lightgray;
  width: 300px;
- height: 500px;
+ height: 508px;
  border-radius: 8px;
  position: relative;
 }
@@ -17,9 +17,10 @@
 }
 
 .card-info{
-    padding-left: 14px;
+    padding-left: 10px;
     margin-top: 0px;
     padding-top: 0px;
+    margin-right: 2px;
 }
 
 .card button{
@@ -31,4 +32,18 @@
     border-radius: 0px 0px 8px 8px;
     position: absolute;
     bottom: 0px;
+}
+
+.card button:hover{
+    background-color: orange;
+}
+
+.card h5{
+    margin-top:12px;
+    margin-bottom: 0px;
+}
+
+.card p{
+    margin-top:11px;
+    margin-bottom: 40px;
 }
