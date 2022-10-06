@@ -1,10 +1,11 @@
+import logo from '../../images/Logo.svg';
 import React from 'react';
 import './Header.css'
 
 const Header = () => {
     return (
         <nav className='header'>
-            <img src="../../../images/Logo.svg" alt="logo" />
+            <img src={logo} alt="logo" />
 
             <div className='links'>
                 <a href="/home">HOME</a>
