@@ -5,7 +5,7 @@ import Summary from '../Summary/Summary';
 const Order = () => {
     const {products, previousCart} = useLoaderData();
     
-    const [cart, setCart] = useState([previousCart]);
+    const [cart, setCart] = useState(previousCart);
 
 
     return (
