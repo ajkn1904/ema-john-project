@@ -1,0 +1,48 @@
+.ordered-item{
+    display: flex;
+    align-items: center;
+    gap:11px;
+    border: 1px solid lightgray;
+    width: 571px;
+    height: 107px;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 21px auto;
+}
+
+.ordered-item img{
+    height: 100px;
+    width: 100px;
+    border-radius: 8px;
+}
+
+.ordered-item-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.ordered-item-info h4{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.ordered-item-info p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.delete-btn{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background: rgba(235, 87, 87, 0.3);
+    border: none;
+}
+.delete-btn:hover{
+    background: rgba(235, 87, 87, 0.8);
+}
+.trash-icon{
+    height: 38px;
+    width: 38px;
+    color: #EB5757;
+}
