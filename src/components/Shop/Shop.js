@@ -5,19 +5,14 @@ import Summary from '../Summary/Summary';
 import {addToCartDB, getStoredCart} from '../../utilities/fakedb';
 
 import './Shop.css'
+import { useLoaderData } from 'react-router-dom';
 
 
 const Shop = () => {
 
-    const [products, setProducts] = useState([]);
+    const products = useLoaderData();
     const [cart, setCart] = useState([]);
 
-
-        useEffect( () =>{
-            fetch('products.json')
-            .then(res=> res.json())
-            .then(data =>setProducts(data))
-        }, []);
 
 
         let newCart = []
