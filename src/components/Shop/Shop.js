@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import Products from '../Products/Products';
 import Summary from '../Summary/Summary';
+import './Shop.css'
 
 import {addToCartDB, deleteCartFromDB, getStoredCart} from '../../utilities/fakedb';
 
 import './Shop.css'
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 
 const Shop = () => {
@@ -74,7 +75,9 @@ const Shop = () => {
 
 
             <div className="summary-container">
-                <Summary cart={cart} clearCart={clearCart}></Summary>
+                <Summary cart={cart} clearCart={clearCart}>
+                    <Link to='/order'><button className='review-btn'> Review Order</button></Link>
+                </Summary>
             </div>
         </div>
     );

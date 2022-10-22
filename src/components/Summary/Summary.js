@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import './Summary.css'
 
-const Summary = ({cart, clearCart}) => {
+const Summary = ({cart, clearCart, children}) => {
     const items = cart;
     
     let totalPrice = 0;
@@ -39,7 +39,8 @@ const Summary = ({cart, clearCart}) => {
             <button onClick={clearCart} className='clear-cart-btn'>
                 <p>Clear Cart</p>
                 <FontAwesomeIcon icon={faTrashCan} className='clear-cart-trash-icon'></FontAwesomeIcon>
-                </button>
+            </button>
+            {children}
             
         </div>
     );

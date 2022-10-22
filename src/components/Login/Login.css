@@ -1,0 +1,86 @@
+.login-form-container{
+    box-sizing: border-box;
+    width: 500px;
+    height: 710px;
+    margin: 50px auto;
+    background: #FFFFFF;
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    box-shadow: #FFE0B3 10px 10px;
+}
+
+h1{
+    height: 42px;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    letter-spacing: 0.0025em;
+    color: #2A414F;
+    text-align: center;
+    margin: auto;
+    margin-top: 38px;
+    margin-bottom: 5px
+}
+
+.form-control{
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 20px;
+}
+
+.form-control input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 55px;
+    left: 526px;
+    border: 1px solid #95A0A7;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.form-control label{
+    height: 20px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.0015em; 
+    color: #2A414F;
+    display: block;
+}
+
+.submit-btn{
+    width: 415px;
+    height: 55px;
+    left: 526px;
+    background: rgba(255, 153, 0, 0.3);
+    border-radius: 5px;
+    margin: 40px 40px 9px 40px;
+    font-weight: 700;
+}
+
+button:hover{
+    background-color: orange;
+}
+
+hr{
+    width: 145px;
+}
+
+.or-container{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray
+}
+
+.other-submit-btn{
+    box-sizing: border-box;
+    width: 415px;
+    height: 55px;
+    left: 526px;
+    border: 1px solid #95A0A7;
+    border-radius: 5px;
+    margin: 10px 40px 10px 40px;
+    font-weight: 700;
+    background-color: white;
+}
